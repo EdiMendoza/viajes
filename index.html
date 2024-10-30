@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sitio de Viajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Nuestro Sitio de Viajes</h1>
+        <button id="loginBtn">Login Usuario</button>
+    </header>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span id="closeLogin" class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <input type="email" placeholder="Correo Electrónico" id="loginEmail">
+            <input type="password" placeholder="Contraseña" id="loginPassword">
+            <button id="loginSubmit">Iniciar Sesión</button>
+            <p>No tienes una cuenta? <a href="#" id="createAccountLink">Crear cuenta</a></p>
+        </div>
+    </div>
+
+    <!-- Modal de Crear Cuenta -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span id="closeRegister" class="close">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <input type="text" placeholder="Nombre" id="registerName">
+            <input type="email" placeholder="Correo Electrónico" id="registerEmail">
+            <input type="password" placeholder="Contraseña" id="registerPassword">
+            <button id="registerSubmit">Registrarse</button>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de administración (visible solo para el administrador) -->
+        <section id="adminPanel" class="hidden">
+            <h2>Panel de Administración</h2>
+            <button id="addFlight">Agregar Ruta de Vuelo</button>
+            <button id="manageUsers">Gestionar Usuarios</button>
+        </section>
+
+        <!-- Información de Vuelos -->
+        <div class="flight-info">
+            <div class="city-info">
+                <img src="R.jpeg" alt="Ciudad 1">
+                <p>Ciudad: Ciudad 1</p>
+                <p>Hora de salida: 10:00 AM</p>
+                <p>Hora de llegada: 2:00 PM</p>
+                <button class="reserveBtn hidden">Reservar</button>
+                <button class="cancelBtn hidden">Cancelar Reserva</button>
+            </div>
+            <!-- Agrega más secciones city-info para más vuelos... -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
